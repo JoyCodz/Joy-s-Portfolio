@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            
+        }
+        html{
+            background-image: url("anime_contact.svg");
+            background-size: cover;
+            background-repeat: round;
+            
+        }
+        body{
+            background-color: transparent;
+            overflow-y: auto;
+            
+        }
+        
+        form {
+            
+            display: block;
+            margin: auto;
+        }
+
+        .form {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.7px);
+            -webkit-backdrop-filter: blur(2.7px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            
+            justify-content: center;
+            width: 350px;
+            display: flex;
+            margin: 20% auto;
+            border-radius: 30px;
+        }
+        .form{
+            display: block;
+            align-content: center;
+        }
+
+        form input {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            border-radius: 16px;
+            border-style: none;
+            padding: 10px 19px;
+            font-size: 1.03rem;
+            margin: 10px;
+        }
+
+        ::placeholder {
+
+            text-decoration: none;
+        }
+
+        #name {
+            margin-top: 30px;
+        }
+
+        form input:active {
+            border-style: none;
+        }
+
+        .message {
+            display: flex;
+            margin: auto;
+
+        }
+
+        form textarea {
+            box-sizing: border-box;
+            border-radius: 16px;
+            border-style: none;
+            padding: 10px 19px;
+            font-size: 1.03rem;
+            resize: none;
+            margin: 0px 10px;
+            width: 240px;
+        }
+
+        form button {
+            display: flex;
+            margin: 0px auto;
+            justify-content: center;
+            width: 91%;
+            box-sizing: border-box;
+            border-radius: 16px;
+            border-style: none;
+            padding: 10px 19px;
+            font-size: 1.03rem;
+            font-style: italic;
+            background-color: aqua;
+            color: rgb(0, 0, 0);
+        }
+
+        #submit {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        #submit:hover {
+            background-color: rgb(231, 207, 255);
+            cursor: pointer;
+        }
+
+        #submit:active {
+            background-color: rgb(196, 133, 255);
+        }
+
+        #thanks {
+            display: flex;
+            justify-content: center;
+        }
+    /* Add this to your existing CSS */
+
+    /* For mobile devices */
+    @media only screen and (max-width: 768px) {
+        .form {
+            width: 80%;
+            margin: 38% auto;
+        }
+
+        form input {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form textarea {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form button {
+            width: 80%;
+            margin:  5px auto;
+        }
+    }
+
+    /* For tablets */
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .form {
+            width: 60%;
+            margin: 10% auto;
+        }
+
+        form input {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form textarea {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form button {
+            width: 80%;
+            margin:  5px auto;
+        }
+    }
+
+    /* For desktops */
+    @media only screen and (min-width: 1025px) {
+        body{
+            height: 100%;
+        }
+        .form {
+            width: 400px;
+            margin:9.7% auto;
+            display: flex;
+            align-content: center;
+        }
+
+        form input {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form textarea {
+            width: 80%;
+            margin:  5px auto;
+        }
+
+        form button {
+            width: 80%;
+            margin:  5px auto;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Joy Santra</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="Education.html">Education</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="form">
+            <form method="post">
+                <div><input id="name" type="text" placeholder="Enter your name"></div>
+                <div><input type="email" name="mail" id="useremail" placeholder="Enter your email"></div>
+                <div class="message"><textarea name="message" id="usermessage"
+                        placeholder="Write your message here."></textarea></div>
+                <div><button type="submit" id="submit" onclick="Thanks()">Submit</button></div>
+                <div id="thanks" style="color: rgb(255, 43, 177);background-color: aqua;"></div>
+            </form>
+        </div>
+
+    </main>
+</body>
+<footer>
+    <div class="copyright">Copyright © 2025 Joysantra.com</div>
+    <div class="social">
+        <div class="insta"><a href="https://www.instagram.com/itz_joy021?igsh=MTQ2b2ttMmVnZmIxaQ=="><img src="Instagram_logo.svg" alt="instagram_logo"></a></div>
+        <div class="linkdin"><a href="https://www.linkedin.com/in/joy-santra/"><img src="Linkedin_logo.svg" alt="linkdin_logo"></a></div>
+        <div class="twitter"><a href="https://x.com/JoySantra656"><img src="X_logo.svg" alt="twitter_logo"></a></div>
+        <div class="github"><a href="https://github.com/JoyCodz"><img src="github_logo.svg" alt="github_logo"></a></div>
+    </div>
+</footer>
+<script lang="javascript">
+    function Thanks() {
+        let a = "Thanks"
+        document.getElementById("thanks").innerHTML = a;
+
+    }
+</script>
+
+
+
+</html>
